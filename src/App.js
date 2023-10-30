@@ -1,7 +1,7 @@
 import ToDo from "./ToDo.js"
 
 function App() {
-  const todo = {
+  const toDo = {
     userId: 1,
     id: 1,
     title: "delectus aut autem",
@@ -9,7 +9,7 @@ function App() {
   };
   return (
 <>
-  <ToDo/>
+  <ToDo {...toDo}/>
   </>
   );
 };
