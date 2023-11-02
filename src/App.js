@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 import ToDo from "./ToDo.js";
+import Comment from "./Comment.js"
 
 function App() {
-  const [toDo, setToDO] = useState({});
-  const [loading, setLoading];
+  const [toDo, setToDo] = useState({});
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {  
     async function getToDo() {
-      setLoading(true);
-    const response = await fetch("https://jsonplaceholder.typicode.com/todos/1"
+    const response = await fetch(
+      "https://jsonplaceholder.typicode.com/todos/4"
     );
     const data = await response.json();
     setToDo(data);
@@ -25,7 +26,8 @@ function App() {
 
   return (
 <>
-  {loading}<ToDo {...toDo}/>
+  {loading ? <p>Loading...</p> : <ToDo {...toDo} />}
+  <Comment />
   </>
   );
 };
