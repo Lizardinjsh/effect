@@ -25,7 +25,7 @@ function Comment() {
   return (
 <>
 <Comment />
-  {loading ? <p>Loading...</p> : <ToDo {...Comment} />}
+  {loading ? <p>Loading...</p> : <toDo {...Comment} />}
   </>
   );
 };

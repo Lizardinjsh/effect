@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import ToDo from "./ToDo.js";
 import Comment from "./Comment.js"
+import Post from "./Post.js"
+import PostsList from "./PostsList"
 
 function App() {
   const [toDo, setToDo] = useState({});
@@ -28,6 +30,8 @@ function App() {
 <>
   {loading ? <p>Loading...</p> : <ToDo {...toDo} />}
   <Comment />
+  <Post />
+  <PostsList />
   </>
   );
 };
