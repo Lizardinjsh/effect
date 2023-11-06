@@ -1,32 +1,22 @@
 import { useEffect, useState } from "react";
 
-function Comment() {
-  const [toDo, setComment] = useState({});
-//   const [loading, setLoading] = useState(true);
-
-  useEffect(() => {  
-    async function getComment() {
-    const response = await fetch(
-      "https://jsonplaceholder.typicode.com/comments/1"
-    );
-    const data = await response.json();
-    setComment(data);
-    setComment(false);
-  };
-      getToDo();
-  }, []);
-
- // const toDo = {
-  //   userId: 1,
-  //   id: 1,
-  //   title: "delectus aut autem",
-  //   completed: false
-
+function Comment(props) {
   return (
 <>
-<Comment />
-  {loading ? <p>Loading...</p> : <toDo {...Comment} />}
-  </>
+  <br></br>
+  <br></br>
+  <br></br>
+  <br></br>
+  <br></br>
+  <br></br>
+<p>postId: {props.postId}</p>
+<p>id: {props.id}</p>
+<p>name: {props.name}</p>
+<p>email: {props.email}</p>
+<p>body: {props.body}</p>
+
+
+</>
   );
-};
+}
 export default Comment;
